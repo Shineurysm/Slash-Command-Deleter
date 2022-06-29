@@ -7,8 +7,8 @@
 ![Prerequisite](https://img.shields.io/badge/dotenv-%3E%3D16.0.1-blue.svg)
 ![Prerequisite](https://img.shields.io/badge/prompt--sync-%3E%3D4.2.0-blue)
 ![Prerequisite](https://img.shields.io/badge/cli--color-%3E%3D2.0.2-blue)
-[![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/kefranabg/readme-md-generator#readme)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/kefranabg/readme-md-generator/graphs/commit-activity)
+[![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/Shineurysm/Slash-Command-Deleter#readme)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Shineurysm/Slash-Command-Deleter/graphs/commit-activity)
 [![License: MIT](https://img.shields.io/github/license/Shineurysm/slash-command-deleter)](https://github.com/Shineurysm/Slash-Command-Deleter/blob/main/LICENSE.md)
 
 > This Program will help you delete your unused or trash Discord Bot Slash Command(s) easily.
