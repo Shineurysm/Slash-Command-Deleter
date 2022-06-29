@@ -1,0 +1,31 @@
+{
+  "name": "slash-command-deleter",
+  "version": "1.0.0",
+  "description": "This is just a quick code that I did. This helps you delete your unused Slash Commands.",
+  "main": "index.js",
+  "scripts": {
+    "del": "node ./index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shineurysm/Slash-Command-Deleter.git"
+  },
+  "keywords": [
+    "discord",
+    "discord-slash-command",
+    "delete-discord-slash-command",
+    "slash-command"
+  ],
+  "author": "Shineurysm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Shineurysm/Slash-Command-Deleter/issues"
+  },
+  "homepage": "https://github.com/Shineurysm/Slash-Command-Deleter#readme",
+  "dependencies": {
+    "cli-color": "^2.0.2",
+    "discord.js": "^13.8.1",
+    "dotenv": "^16.0.1",
+    "prompt-sync": "^4.2.0"
+  }
+}
