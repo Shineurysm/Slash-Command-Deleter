@@ -17,6 +17,7 @@ client.on('ready', async () => {
     // show your client application commands ===================================
     async function showSlash() {
         const fetchSlash = await client.application.commands.fetch() // fetching the slash commands
+        let slashCount = 0; // slash counts
 
         if (fetchSlash.size === 0) { // the application doesn't have a slash command
             console.log(clc.cyanBright('This Application doesn\'t have a Slash Command'))
@@ -24,7 +25,9 @@ client.on('ready', async () => {
         }
 
         const slashCmd = fetchSlash.map((cmd) => { // mapping the slash commands
-            return ` ${clc.yellowBright(`${cmd.name}`)} ${clc.redBright('||')} ${clc.yellowBright(`${cmd.id}`)}`
+            slashCount++;
+
+            return `${clc.greenBright(`${slashCount})`)} ${clc.yellowBright(`${cmd.name}`)} ${clc.redBright('||')} ${clc.yellowBright(`${cmd.id}`)}`
 
         })
 
