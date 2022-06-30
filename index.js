@@ -18,39 +18,43 @@ client.on('ready', async () => {
     async function showSlash() {
         const fetchSlash = await client.application.commands.fetch() // fetching the slash commands
 
-        if (fetchSlash.size === 0) {
+        if (fetchSlash.size === 0) { // the application doesn't have a slash command
             console.log(clc.cyanBright('This Application doesn\'t have a Slash Command'))
             return await client.destroy() // destroying the client (disconnecting) if there is no slash commands to be deleted
         }
 
-        const slashCmd = fetchSlash.map((cmd) => {
+        const slashCmd = fetchSlash.map((cmd) => { // mapping the slash commands
             return ` ${clc.yellowBright(`${cmd.name}`)} ${clc.redBright('||')} ${clc.yellowBright(`${cmd.id}`)}`
 
         })
 
-        slashCmd.unshift(`${clc.cyanBright('===================')}`); slashCmd.push(`${clc.cyanBright('===================')}`)
+        slashCmd.unshift(`${clc.cyanBright('===================')}`); slashCmd.push(`${clc.cyanBright('===================')}`); // the top/bottom-most message's
 
-        console.log(slashCmd.join('\n'))
+        console.log(slashCmd.join('\n')); // joining the message's since they're in array
 
-        await wait(1500)
+        await wait(1500);
 
-        firstDel()
+        firstDel() // calling the first prompts
     }
     // =========================================================================
-
 
     // the prompt to be shown if there is available application slash command ==
     function firstDel() {
         const id = prompt(clc.greenBright('Input the ID of the Slash Command that you wish to delete: '))
 
-        if (id?.length === 0) {
-            firstDel() // call itself again if the end user just keeps clicking the "enter" button
-        } else if (isNaN(id)) {
+        if (id?.length === 0) { // id length is 0
+            firstDel()
+        } else if (typeof id === 'object') { // if the end user wish to cancel A.K.A  " ^C "
+            return client.destroy()
+        } else if (!/^\d+$/.test(id)) { // testing if the id is a number
             console.log(clc.red('ID Must be a Number'))
-            secondDel() // call the second Delete function
+            secondDel()
+        } else if (id?.length > 18) { // the ID must be only 18 numbers
+            console.log(clc.red('That doesn\'t look quite right, Discord Slash Command ID\'s only contains 18 numbers'))
+            secondDel()
+        } else { // preparing to delete the slash command
+            deleteSlash(id) // proceed to the last step
         }
-
-        deleteSlash(id) // proceed to the last step
     }
     // =========================================================================
 
@@ -59,14 +63,19 @@ client.on('ready', async () => {
     function secondDel() {
         const id = prompt(`${clc.redBright('[Wrong ID]')} ${clc.greenBright('Input the ID of the Slash Command that you wish to delete:')} `)
 
-        if (id?.length === 0) {
-            secondDel() // call itself again if the end user just keeps clicking the "enter" button
-        } else if (isNaN(id)) {
+        if (id?.length === 0) { // id length is 0
+            secondDel()
+        } else if (typeof id === 'object') { // if the end user wish to cancel A.K.A  " ^C "
+            return client.destroy()
+        } else if (!/^\d+$/.test(id)) { // testing if the id is a number
             console.log(clc.red('ID Must be a Number'))
-            secondDel() // call itself again if the ID isnt a number
-        } 3
-
-        deleteSlash(id) // proceed to the last step
+            secondDel()
+        } else if (id?.length > 18) { // the ID must be only 18 numbers
+            console.log(clc.red('That doesn\'t look quite right, Discord Slash Command ID\'s only contains 18 numbers'))
+            secondDel()
+        } else { // preparing to delete the slash command
+            deleteSlash(id) // proceed to the last step
+        }
     }
     // =========================================================================
 
@@ -84,8 +93,11 @@ client.on('ready', async () => {
                     throw (err) // throw the error
                 })
         } catch (err) {
-            if (err.code === 10063) {
+            if (err.code === 10063 || err.code === 50035) {
                 console.log(clc.red('That Slash Command ID is Invalid')) // the provided ID is invalid
+
+                await wait(650)
+
                 secondDel() // call the second Delete function
             }
         }
