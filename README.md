@@ -11,18 +11,11 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Shineurysm/Slash-Command-Deleter/graphs/commit-activity)
 [![License: MIT](https://img.shields.io/github/license/Shineurysm/slash-command-deleter)](https://github.com/Shineurysm/Slash-Command-Deleter/blob/main/LICENSE.md)
 
+---
+
 # About
 
-> This Program will help you delete your unused or trash Discord Bot Slash Command(s) easily.
-
-## Prerequisites
-
-- npm >=5.5.0
-- node >=9.3.0
-- discord.js >= 13.8.1
-- dotenv >= 16.0.1
-- prompt-sync >= 4.2.0
-- cli-color >= 2.0.2
+> **This Program will help you delete your unused or trash Discord Bot Slash Command(s) easily.**
 
 ## Setup
 
@@ -32,7 +25,7 @@
 TOKEN=YOUR_BOT_TOKEN
 ```
 
-*Change the "YOUR_BOT_TOKEN" into your Bot Token. Can be found in (Discord Developer Portal)[https://discord.com/developers/applications]*
+**_Change the "YOUR_BOT_TOKEN" into your Bot Token. Can be found in [Discord Developer Portal](https://discord.com/developers/applications)_**
 
 ## Install All Required Package
 
@@ -45,6 +38,10 @@ npm install
 ```sh
 npm run del
 ```
+
+## Prerequisites
+
+> **npm >=5.5.0** > **node >=9.3.0** > **discord.js >= 13.8.1** > **dotenv >= 16.0.1** > **prompt-sync >= 4.2.0** > **cli-color >= 2.0.2**
 
 ## Author
 
@@ -60,6 +57,6 @@ npm run del
 
 **Copyright © 2022 [Shin](https://github.com/Shineurysm).**
 
-***This project is [MIT](https://github.com/Shineurysm/Slash-Command-Deleter/blob/main/LICENSE.md) Licensed, You can freely use this code, modify it, or change some things, but PLEASE Please please include my this github repository as your credit.***
+**_This project is [MIT](https://github.com/Shineurysm/Slash-Command-Deleter/blob/main/LICENSE.md) Licensed, You can freely use this code, modify it, or change some things, but PLEASE Please please include my this github repository as your credit._**
 
 ---
