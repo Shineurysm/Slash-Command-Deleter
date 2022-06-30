@@ -16,7 +16,7 @@
 # 📃 About
 
 **This Program will help you delete your unused or trash Discord Bot Slash Command(s) easily.**
-</br>
+
 
 ## 🔧 Setup
 
@@ -27,14 +27,21 @@ TOKEN=YOUR_BOT_TOKEN
 ```
 
 ***Change the "YOUR_BOT_TOKEN" into your Bot Token. Can be found in [Discord Developer Portal](https://discord.com/developers/applications)***
-</br>
 
-## 📦 Install All Package
+
+## 📦 Installing all the packages
 
 ```sh
 npm install
 ```
-</br>
+
+
+## 🏃‍♂️ Run the program
+
+```sh
+npm run del
+```
+
 
 ## 📦 Prerequisites
 
@@ -44,26 +51,19 @@ npm install
 > - **dotenv >= 16.0.1**
 > - **prompt-sync >= 4.2.0**
 > - **cli-color >= 2.0.2**
-</br>
 
-## 🏃‍♂️ Run The Program
-
-```sh
-npm run del
-```
-</br>
 
 ## 💻 Developer
 
 💡 **Shin**
 
 - ***Github: [@Shineurysm](https://github.com/Shineurysm)***
-</br>
+
 
 ## 🎉 Support Me
 
 **Give this project a Star If this helped you or going to help you, I would really appreciate it, thank you!**
-</br>
+
 
 ## 📝 License
 
