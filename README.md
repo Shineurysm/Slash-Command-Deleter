@@ -13,6 +13,9 @@
 
 ---
 
+# 👓 Preview
+![Preview](https://i.imgur.com/7amo2F6.png)
+
 # 📃 About
 
 **This Program will help you delete your unused or trash Discord Bot Slash Command(s) easily.**
