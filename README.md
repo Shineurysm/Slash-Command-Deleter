@@ -14,7 +14,8 @@
 ---
 
 # 👓 Preview
-![Preview](https://i.imgur.com/7amo2F6.png)
+![Preview](https://i.imgur.com/xI5R6A6.png)
+![Second-Preview](https://imgur.com/4iY24dz.png)
 
 # 📃 About
 
