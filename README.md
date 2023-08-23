@@ -73,6 +73,6 @@ npm run del
 
 **Copyright © 2022 [Shin](https://github.com/Shineurysm).**
 
-***This project is [MIT](https://github.com/Shineurysm/Slash-Command-Deleter/blob/main/LICENSE.md) Licensed, You can freely use this code, modify it, or change some things, but PLEASE Please please include my this github repository as your credit.***
+***This project is [MIT](https://github.com/Shineurysm/Slash-Command-Deleter/blob/main/LICENSE.md) Licensed, You can freely use this code, modify it, or change some things, but please give credit to this github repository***
 
 ---
